@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <form action="../index.html">
+        <button type="submit" class="submit">Kembali ke Log in</button>
+        </form>
+        <h1>HOMEPAGE PERPUSTAKAAN WIBU</h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="index.html" class="aktif">Home</a></li>
+            <li><a href="koleksi.html">Koleksi</a></li>
+            <li><a href="tentang.html">Tentang Kami</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <div class="library">
+            <h2>Selamat Datang Di Perpustakaan Wibu</h2>
+            <p>Perpustakaan Wibu adalah tempat yang menyediakan berbagai koleksi manga</p>
+        </div>
+        <div class="pos">
+            <div class="card">
+                <div class="card-image">
+                    <img src="one piece.jpg" alt="Gambar 1">
+                </div>
+                <div class="card-detail">
+                    <h3>One Piece</h3>
+                    <p>Pengarang : Eichiro Oda</p>
+                    <p>Penerbit : Shueisha</p>
+                    <p>Tahun Terbit : 1997</p>
+                </div> 
+                <div class="button">
+                    <button class="btn">Pinjam</button>
+                    <button class="btn1">Detail</button>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-image">
+                    <img src="Jujutsu kaisen.jpg" alt="Gambar 2">
+                </div>
+                <div class="card-detail">
+                    <h3>Jujutsu Kaisen</h3>
+                    <p>Pengarang : Gege Akutami</p>
+                    <p>Penerbit : Shueisha</p>
+                    <p>Tahun Terbit : 2017</p>
+                </div>
+                <div class="button">
+                    <button class="btn">Pinjam</button>
+                    <button class="btn1">Detail</button>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-image">
+                    <img src="parallel world pharmacy.jpg" alt="Gambar 1">
+                </div>
+                <div class="card-detail">
+                    <h3>Parallel World Pharmacy</h3>
+                    <p>Pengarang : Tetsuya Tsukuda</p>
+                    <p>Penerbit : Kadokawa Shoten</p>
+                    <p>Tahun Terbit : 1997</p>
+                </div>
+                <div class="button">
+                    <button class="btn">Pinjam</button>
+                    <button class="btn1">Detail</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer>
+        &copy; 2024 Perpustakaan Wibu. Hak Cipta Dilindungi.
+    </footer>
+
+    <script>
+        const buttons = document.querySelectorAll('.btn');
+
+        buttons.forEach(btn => {
+            btn.addEventListener('click', () => {
+                const card = btn.closest('.card');
+                const h3 = card.querySelector('h3');
+                alert('Anda meminjam: ' + h3.textContent);
+            });
+        });
+
+        const buttons1 = document.querySelectorAll('.btn1');
+
+        buttons1.forEach(btn1 => {
+            btn1.addEventListener('click', () => {
+                const card = btn1.closest('.card');
+                const h3 = card.querySelector('h3');
+                alert('Anda melihat detail: ' + h3.textContent);
+            });
+        });
+    </script>
+</body>
+</html>
